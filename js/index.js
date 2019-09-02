@@ -103,3 +103,13 @@ contentParagraphs[4].innerText = siteContent['main-content']['vision-content'];
 
 let midPageAccent = document.getElementById('mid-page-accent');
 logo.setAttribute('src', siteContent['nav']['img-src']);
+
+// Contact
+
+let contact = document.querySelector('contact-h4');
+contact.innerText = siteContent['contact']['contact-h4'];
+
+// Footer
+
+let footer = document.querySelector('footer');
+footer.innerText = siteContent.footer.copyright;
