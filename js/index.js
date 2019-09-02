@@ -48,12 +48,12 @@ logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // Navigation
 let navA = document.querySelectorAll('a');
-navA[0].textContent = siteContent['nav']['nav-item-1'];
-navA[1].textContent = siteContent['nav']['nav-item-2'];
-navA[2].textContent = siteContent['nav']['nav-item-3'];
-navA[3].textContent = siteContent['nav']['nav-item-4'];
-navA[4].textContent = siteContent['nav']['nav-item-5'];
-navA[5].textContent = siteContent['nav']['nav-item-6'];
+navA[0].innerText = siteContent['nav']['nav-item-1'];
+navA[1].innerText = siteContent['nav']['nav-item-2'];
+navA[2].innerText = siteContent['nav']['nav-item-3'];
+navA[3].innerText = siteContent['nav']['nav-item-4'];
+navA[4].innerText = siteContent['nav']['nav-item-5'];
+navA[5].innerText = siteContent['nav']['nav-item-6'];
 
 navA.forEach(function(currentValue) {
   currentValue.style.color = 'green';
@@ -75,10 +75,31 @@ nav.append(navATwo);
 
 // CTA
 let headerText = document.querySelector('h1');
-headerText.textContent = siteContent.cta.h1;
+headerText.innerText = siteContent.cta.h1;
 
 let btn = document.querySelector('button');
-btn.textContent = siteContent.cta.button;
+btn.innerText = siteContent.cta.button;
 
 let headerImage = document.getElementById('header-img');
+logo.setAttribute('src', siteContent['nav']['img-src']);
+
+// Main-Content
+
+let contentHeadings = document.querySelector('h4');
+contentHeadings[0].innerText = siteContent['main-content']['features-h4'];
+contentHeadings[1].innerText = siteContent['main-content']['about-h4'];
+contentHeadings[2].innerText = siteContent['main-content']['services-h4'];
+contentHeadings[3].innerText = siteContent['main-content']['product-h4'];
+contentHeadings[4].innerText = siteContent['main-content']['vision-h4'];
+
+let contentParagraphs = document.querySelector('p');
+contentParagraphs[0].innerText =
+  siteContent['main-content']['features-content'];
+contentParagraphs[1].innerText = siteContent['main-content']['about-content'];
+contentParagraphs[2].innerText =
+  siteContent['main-content']['services-content'];
+contentParagraphs[3].innerText = siteContent['main-content']['product-content'];
+contentParagraphs[4].innerText = siteContent['main-content']['vision-content'];
+
+let midPageAccent = document.getElementById('mid-page-accent');
 logo.setAttribute('src', siteContent['nav']['img-src']);
