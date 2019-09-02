@@ -73,5 +73,12 @@ navATwo = 'FAQ';
 
 nav.append(navATwo);
 
+// CTA
+let headerText = document.querySelector('h1');
+headerText.textContent = siteContent.cta.h1;
+
+let btn = document.querySelector('button');
+btn.textContent = siteContent.cta.button;
+
 let headerImage = document.getElementById('header-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
