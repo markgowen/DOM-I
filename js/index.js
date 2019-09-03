@@ -9,7 +9,7 @@ const siteContent = {
     'img-src': 'img/logo.png'
   },
   cta: {
-    h1: 'DOM Is AwenavAOne',
+    h1: 'DOM Is Awesome',
     button: 'Get Started',
     'img-src': 'img/header-img.png'
   },
@@ -33,7 +33,7 @@ const siteContent = {
   },
   contact: {
     'contact-h4': 'Contact',
-    address: '123 Way 456 Street navAOnewhere, USA',
+    address: '123 Way 456 Street Anywhere, USA',
     phone: '1 (888) 888-8888',
     email: 'sales@greatidea.io'
   },
@@ -43,7 +43,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById('logo-img');
+const logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // Navigation
@@ -63,13 +63,13 @@ let nav = document.querySelector('nav');
 
 let navAOne = document.createElement('a');
 navAOne.style.color = 'green';
-navAOne = 'Home';
+navAOne.innerText = 'Home';
 
 nav.prepend(navAOne);
 
 let navATwo = document.createElement('a');
 navATwo.style.color = 'green';
-navATwo = 'FAQ';
+navATwo.innerText = 'FAQ';
 
 nav.append(navATwo);
 
@@ -80,19 +80,27 @@ headerText.innerText = siteContent.cta.h1;
 let btn = document.querySelector('button');
 btn.innerText = siteContent.cta.button;
 
-let headerImage = document.getElementById('header-img');
-logo.setAttribute('src', siteContent['nav']['img-src']);
+let headerImage = document.getElementById('cta-img');
+headerImage.setAttribute('src', siteContent['cta']['img-src']);
 
 // Main-Content
 
-let contentHeadings = document.querySelector('h4');
+let midPageAccent = document.getElementById('middle-img');
+midPageAccent.setAttribute(
+  'src',
+  siteContent['main-content']['middle-img-src']
+);
+
+let contentHeadings = document.querySelectorAll('h4');
+
+console.log(contentHeadings);
 contentHeadings[0].innerText = siteContent['main-content']['features-h4'];
 contentHeadings[1].innerText = siteContent['main-content']['about-h4'];
 contentHeadings[2].innerText = siteContent['main-content']['services-h4'];
 contentHeadings[3].innerText = siteContent['main-content']['product-h4'];
 contentHeadings[4].innerText = siteContent['main-content']['vision-h4'];
 
-let contentParagraphs = document.querySelector('p');
+let contentParagraphs = document.querySelectorAll('p');
 contentParagraphs[0].innerText =
   siteContent['main-content']['features-content'];
 contentParagraphs[1].innerText = siteContent['main-content']['about-content'];
@@ -101,13 +109,17 @@ contentParagraphs[2].innerText =
 contentParagraphs[3].innerText = siteContent['main-content']['product-content'];
 contentParagraphs[4].innerText = siteContent['main-content']['vision-content'];
 
-let midPageAccent = document.getElementById('mid-page-accent');
-logo.setAttribute('src', siteContent['nav']['img-src']);
-
 // Contact
 
-let contact = document.querySelector('contact-h4');
+let contact = document.querySelector('.contact h4');
 contact.innerText = siteContent['contact']['contact-h4'];
+
+let contactParagraph = document.querySelectorAll('.contact p');
+
+console.log(contactParagraph);
+contactParagraph[0].innerText = siteContent['contact']['address'];
+contactParagraph[1].innerText = siteContent['contact']['phone'];
+contactParagraph[2].innerText = siteContent['contact']['email'];
 
 // Footer
 
